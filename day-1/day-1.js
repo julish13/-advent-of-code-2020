@@ -11,3 +11,16 @@ export const part1 = (input) => {
     }
   }
 };
+
+export const part2 = (input) => {
+  const numbers = parseInput(input);
+  for (let number1 of numbers) {
+    for (let number2 of numbers) {
+      for (let number3 of numbers) {
+        if (number1 + number2 + number3 === 2020) {
+          return number1 * number2 * number3;
+        }
+      }
+    }
+  }
+};
